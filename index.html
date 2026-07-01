@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Date With Me ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- Floating Hearts -->
+    <div class="hearts"></div>
+
+    <!-- Progress -->
+    <div class="progress-container">
+        <div id="progressBar"></div>
+    </div>
+
+    <!-- Main Card -->
+
+    <div class="container">
+
+        <!-- STEP 1 -->
+
+        <section class="step active" id="step1">
+
+            <div class="emoji">💖</div>
+
+            <h1>Do you want to go on a date with me?</h1>
+
+            <p>
+                I promise it'll be fun.
+            </p>
+
+            <div class="buttons">
+
+                <button id="noBtn" class="no-btn">
+                    No 💔
+                </button>
+
+                <button onclick="nextStep()" class="yes-btn">
+                    Yes ❤️
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- STEP 2 -->
+
+        <section class="step" id="step2">
+
+            <h2>Choose Your Date 📅</h2>
+
+            <input type="date" id="date">
+
+            <button onclick="nextStep()">
+                Continue →
+            </button>
+
+        </section>
+
+        <!-- STEP 3 -->
+
+        <section class="step" id="step3">
+
+            <h2>Select Time 🕒</h2>
+
+            <input type="time" id="time">
+
+            <button onclick="nextStep()">
+                Continue →
+            </button>
+
+        </section>
+
+        <!-- STEP 4 -->
+
+        <section class="step" id="step4">
+
+            <h2>Choose Our Date Type ❤️</h2>
+
+            <div class="cards">
+
+                <div class="card" data-value="Coffee ☕">
+                    ☕
+                    <span>Coffee</span>
+                </div>
+
+                <div class="card" data-value="Tea 🍵">
+                    🍵
+                    <span>Tea</span>
+                </div>
+
+                <div class="card" data-value="Lunch 🍔">
+                    🍔
+                    <span>Lunch</span>
+                </div>
+
+                <div class="card" data-value="Movie 🍿">
+                    🍿
+                    <span>Movie</span>
+                </div>
+
+                <div class="card" data-value="Park 🌳">
+                    🌳
+                    <span>Park</span>
+                </div>
+
+                <div class="card" data-value="Pizza 🍕">
+                    🍕
+                    <span>Pizza</span>
+                </div>
+
+                <div class="card" data-value="Ice Cream 🍦">
+                    🍦
+                    <span>Ice Cream</span>
+                </div>
+
+                <div class="card" data-value="Shopping 🛍️">
+                    🛍️
+                    <span>Shopping</span>
+                </div>
+
+            </div>
+
+            <button onclick="nextStep()">
+                Continue →
+            </button>
+
+        </section>
+
+        <!-- STEP 5 -->
+
+        <section class="step" id="step5">
+
+            <h2>Your Name 😊</h2>
+
+            <input type="text"
+                id="name"
+                placeholder="Enter your name">
+
+            <textarea
+                id="message"
+                placeholder="Write a sweet message..."></textarea>
+
+            <button onclick="nextStep()">
+                Continue →
+            </button>
+
+        </section>
+
+        <!-- STEP 6 -->
+
+        <section class="step" id="step6">
+
+            <h2>Ready? ❤️</h2>
+
+            <p>
+                Click below to send your date request.
+            </p>
+
+            <button id="sendBtn">
+                Send Date Request 💌
+            </button>
+
+        </section>
+
+        <!-- Success -->
+
+        <section class="step" id="success">
+
+            <div class="emoji">
+                🎉
+            </div>
+
+            <h1>Yay!! ❤️</h1>
+
+            <p>
+                Your date request has been sent successfully!
+            </p>
+
+        </section>
+
+    </div>
+
+    <!-- NO POPUP -->
+
+    <div class="popup" id="popup">
+
+        <div class="popup-box">
+
+            <h2>💔</h2>
+
+            <h3>That's Okay!</h3>
+
+            <p>
+                Thanks for being honest ❤️
+            </p>
+
+            <button id="closePopup">
+                Close
+            </button>
+
+        </div>
+
+    </div>
+        <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+        <script>
+        emailjs.init({
+            publicKey: "OYjRQdCtjB1hsrT-Z"
+        });
+        </script>
+
+        <script src="script.js"></script>
+
+</body>
+
+</html>
