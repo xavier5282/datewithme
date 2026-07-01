@@ -162,7 +162,7 @@ document.getElementById("sendBtn").addEventListener("click", function () {
     sendBtn.innerHTML = "Sending...";
     sendBtn.disabled = true;
 
-    const templateParams = {
+const templateParams = {
     name: document.getElementById("name").value,
     date: document.getElementById("date").value,
     time: document.getElementById("time").value,
@@ -170,31 +170,30 @@ document.getElementById("sendBtn").addEventListener("click", function () {
     message: document.getElementById("message").value
 };
 
-    emailjs.send(
-         "service_hxcx4vz",
-        "template_rqvmhx4",
-        templateParams
-    )
+emailjs.send(
+    "service_hxcx4vz",
+    "template_e62wxak",
+    templateParams
+)
+.then(function (response) {
 
-    .then(function () {
+    console.log("SUCCESS!", response);
 
-        document.getElementById("step6").classList.remove("active");
+    document.getElementById("step6").classList.remove("active");
+    document.getElementById("success").classList.add("active");
 
-        document.getElementById("success").classList.add("active");
+    progressBar.style.width = "100%";
 
-        progressBar.style.width = "100%";
+})
+.catch(function (error) {
 
-    })
+    console.error("EMAILJS ERROR:", error);
+    alert("Failed to send.\n" + JSON.stringify(error));
 
-    .catch(function (error) {
+    sendBtn.innerHTML = "Send Date Request 💌";
+    sendBtn.disabled = false;
 
-        alert("Failed to send.\n" + JSON.stringify(error));
-
-        sendBtn.innerHTML = "Send Date Request 💌";
-        sendBtn.disabled = false;
-
-    });
-
+});
 });
 
 // ===============================
