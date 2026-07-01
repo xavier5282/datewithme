@@ -33,47 +33,142 @@
 
     <!-- Main Card -->
 
+        <div id="intro">
+
+            <div class="intro-content">
+
+                <div class="big-heart">❤️</div>
+
+                <h1>Someone has something special to ask you...</h1>
+
+                <p>Wait a moment ✨</p>
+
+            </div>
+        </div>
+
     <div class="container">
 
         <!-- STEP 1 -->
 
-        <section class="step active" id="step1">
+            <div class="step active" id="step1">
 
-            <div class="emoji">💖</div>
+                <div class="hero">
+                    <div class="glow"></div>
+                    <img src="assets/images/joyonto-icon.png" class="profile" alt="Joyonto Rozario portrait" loading="lazy">
+                    <h1>Joyonto Rozario</h1>
+                    <h3>UI/UX Designer • Founder</h3>
+                    <p class="quote">
+                        "Life is more beautiful when shared with someone special."
+                    </p>
+                </div>
 
-            <h1>Do you want to go on a date with me?</h1>
+                <div class="question">
+                    <h2>Will you go on a date with me? ❤️</h2>
+                </div>
 
-            <p>
-                I promise it'll be fun.
-            </p>
-
-            <div class="buttons">
-
-                <button id="noBtn" class="no-btn">
-                    No 💔
-                </button>
-
-                <button onclick="nextStep()" class="yes-btn">
-                    Yes ❤️
-                </button>
-
+                <div class="buttons">
+                    <button onclick="nextStep()" class="yesBtn">
+                        Yes ❤️
+                    </button>
+                    <button id="noBtn" class="noBtn">
+                        No 😢
+                    </button>
+                </div>
             </div>
-
-        </section>
 
         <!-- STEP 2 -->
 
-        <section class="step" id="step2">
+        <!-- STEP 2 -->
 
-            <h2>Choose Your Date 📅</h2>
+         <!-- ===========================
+STEP 2
+=========================== -->
 
-            <input type="date" id="date">
+            <div class="step" id="step2">
 
-            <button onclick="nextStep()">
-                Continue →
-            </button>
+                <div class="calendar-wrapper">
 
-        </section>
+                    <div class="calendar-title">
+
+                        <div class="calendar-icon">
+                            📅
+                        </div>
+
+                        <h2>Choose Our Special Day</h2>
+
+                        <p>
+                            Click your favorite date ❤️
+                        </p>
+
+                    </div>
+
+                    <div class="calendar">
+
+                        <!-- Header -->
+
+                        <div class="calendar-header">
+
+                            <button id="prevMonth">
+                                &#10094;
+                            </button>
+
+                            <h3 id="monthYear">
+                                July 2026
+                            </h3>
+
+                            <button id="nextMonth">
+                                &#10095;
+                            </button>
+
+                        </div>
+
+                        <!-- Week -->
+
+                        <div class="weekdays">
+
+                            <div>Sun</div>
+                            <div>Mon</div>
+                            <div>Tue</div>
+                            <div>Wed</div>
+                            <div>Thu</div>
+                            <div>Fri</div>
+                            <div>Sat</div>
+
+                        </div>
+
+                        <!-- Dates -->
+
+                        <div id="calendarDays" class="calendar-days">
+
+                        </div>
+
+                    </div>
+
+                    <!-- Selected -->
+
+                    <div class="selected-card">
+
+                        <h3>
+                            ❤️ Selected Date
+                        </h3>
+
+                        <p id="selectedDateText">
+
+                            No date selected
+
+                        </p>
+
+                    </div>
+
+                    <button class="continueBtn" onclick="nextStep()">
+
+                        Continue →
+
+                    </button>
+
+                </div>
+
+            </div>
 
         <!-- STEP 3 -->
 
@@ -93,53 +188,71 @@
 
         <section class="step" id="step4">
 
-            <h2>Choose Our Date Type ❤️</h2>
+            <div class="activity-header">
 
-            <div class="cards">
+                <div class="activity-icon">❤️</div>
 
-                <div class="card" data-value="Coffee ☕">
-                    ☕
-                    <span>Coffee</span>
+                <h2>Choose Our Date</h2>
+
+                <p>
+                    Pick the activity that sounds perfect.
+                </p>
+
+            </div>
+
+            <div class="activity-grid">
+
+                <div class="card" data-value="Coffee Date ☕">
+                    <div class="emoji">☕</div>
+                    <h3>Coffee</h3>
+                    <span>Relax & Chat</span>
                 </div>
 
-                <div class="card" data-value="Tea 🍵">
-                    🍵
-                    <span>Tea</span>
+                <div class="card" data-value="Tea Date 🍵">
+                    <div class="emoji">🍵</div>
+                    <h3>Tea</h3>
+                    <span>Peaceful Time</span>
                 </div>
 
-                <div class="card" data-value="Lunch 🍔">
-                    🍔
-                    <span>Lunch</span>
+                <div class="card" data-value="Fast Food 🍔">
+                    <div class="emoji">🍔</div>
+                    <h3>Fast Food</h3>
+                    <span>Burger & Fries</span>
+                </div>
+
+                <div class="card" data-value="Lunch 🍝">
+                    <div class="emoji">🍝</div>
+                    <h3>Lunch</h3>
+                    <span>Enjoy Together</span>
                 </div>
 
                 <div class="card" data-value="Movie 🍿">
-                    🍿
-                    <span>Movie</span>
+                    <div class="emoji">🍿</div>
+                    <h3>Movie</h3>
+                    <span>Cinema Night</span>
                 </div>
 
                 <div class="card" data-value="Park 🌳">
-                    🌳
-                    <span>Park</span>
-                </div>
-
-                <div class="card" data-value="Pizza 🍕">
-                    🍕
-                    <span>Pizza</span>
+                    <div class="emoji">🌳</div>
+                    <h3>Park</h3>
+                    <span>Walk Together</span>
                 </div>
 
                 <div class="card" data-value="Ice Cream 🍦">
-                    🍦
-                    <span>Ice Cream</span>
+                    <div class="emoji">🍦</div>
+                    <h3>Ice Cream</h3>
+                    <span>Sweet Moments</span>
                 </div>
 
-                <div class="card" data-value="Shopping 🛍️">
-                    🛍️
-                    <span>Shopping</span>
+                <div class="card" data-value="Dinner 🍷">
+                    <div class="emoji">🍷</div>
+                    <h3>Dinner</h3>
+                    <span>Romantic Evening</span>
                 </div>
 
             </div>
 
-            <button onclick="nextStep()">
+            <button class="continueBtn" onclick="nextStep()">
                 Continue →
             </button>
 
@@ -149,18 +262,98 @@
 
         <section class="step" id="step5">
 
-            <h2>Your Name 😊</h2>
+            <div class="details-header">
 
-            <input type="text"
+                <div class="details-icon">💖</div>
+
+                <h2>Let's Plan Our Date</h2>
+
+                <p>Just a few more details ❤️</p>
+
+            </div>
+
+            <!-- Meeting Place -->
+
+            <label>📍 Meeting Place</label>
+
+            <select id="location">
+
+                <option value="">Choose Location</option>
+
+                <option>Coffee Shop ☕</option>
+
+                <option>Restaurant 🍽️</option>
+
+                <option>Park 🌳</option>
+
+                <option>Cinema 🎬</option>
+
+                <option>Shopping Mall 🛍️</option>
+
+                <option>My Surprise Place ❤️</option>
+
+            </select>
+
+            <!-- Google Maps -->
+
+            <label>🗺️ Google Maps Link (Optional)</label>
+
+            <input
+                type="text"
+                id="maps"
+                placeholder="https://maps.google.com/...">
+
+            <!-- Dress Code -->
+
+            <label>👗 Dress Code</label>
+
+            <div class="choice-grid">
+
+                <div class="choice" data-dress="Casual">👕 Casual</div>
+
+                <div class="choice" data-dress="Formal">🤵 Formal</div>
+
+                <div class="choice" data-dress="Traditional">🥻 Traditional</div>
+
+                <div class="choice" data-dress="Surprise">🎁 Surprise Me</div>
+
+            </div>
+
+            <!-- Payment -->
+
+            <label>💰 Who Pays?</label>
+
+            <div class="choice-grid">
+
+                <div class="choice pay" data-pay="Me">😊 I'll Pay</div>
+
+                <div class="choice pay" data-pay="Split">🤝 Split Bill</div>
+
+                <div class="choice pay" data-pay="Surprise">🎁 Surprise</div>
+
+            </div>
+
+            <!-- Name -->
+
+            <label>Your Name</label>
+
+            <input
                 id="name"
-                placeholder="Enter your name">
+                type="text"
+                placeholder="Your Name">
+
+            <!-- Message -->
+
+            <label>Sweet Message ❤️</label>
 
             <textarea
                 id="message"
-                placeholder="Write a sweet message..."></textarea>
+                placeholder="Write something sweet..."></textarea>
 
             <button onclick="nextStep()">
+
                 Continue →
+
             </button>
 
         </section>
@@ -201,7 +394,7 @@
 
     <!-- NO POPUP -->
 
-    <div class="popup" id="popup">
+    <div class="popup" id="popup" role="dialog" aria-modal="true" aria-label="Date response">
 
         <div class="popup-box">
 
@@ -213,7 +406,7 @@
                 Thanks for being honest ❤️
             </p>
 
-            <button id="closePopup">
+            <button id="closePopup" aria-label="Close popup">
                 Close
             </button>
 
